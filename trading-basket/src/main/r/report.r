@@ -1,5 +1,5 @@
-orders <- read.csv('/var/folders/_5/jv4ptlps2ydb4_ptyj_l2y100000gn/T/out-7373128809679149089.csv') # insert output file here
-statistics <- read.csv('/var/folders/_5/jv4ptlps2ydb4_ptyj_l2y100000gn/T/out-1984107031930922019.csv') # insert output file here
+orders <- read.csv('out-orders.csv') # insert output file here
+statistics <- read.csv('ut-pnl.csv') # insert output file here
 statistics$date = as.Date(statistics$date)
 
 deposit = 15000
@@ -10,7 +10,7 @@ print(paste('Win percentage: ', pctWin*100, '%'))
 
 ## specific to the cointegration strategy
 
-kalmanStatistics = read.csv('/var/folders/_5/jv4ptlps2ydb4_ptyj_l2y100000gn/T/out-3935155810073028635.csv') # insert output file here
+kalmanStatistics = read.csv('out-cointeg.csv') # insert output file here
 kalmanStatistics$date = as.Date(kalmanStatistics$date)
 
 plot(kalmanStatistics$beta, type='l')
